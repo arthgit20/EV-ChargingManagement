@@ -55,6 +55,13 @@ function App() {
           >
             Get Started
           </button>
+
+          <button
+  onClick={() => setPage("dashboard")}
+  className="rounded-lg border border-emerald-400/30 px-4 py-2 text-sm text-emerald-400 hover:bg-emerald-400/10"
+>
+  Dashboard
+</button>
         </nav>
 
         <main className="flex min-h-[calc(100vh-81px)] items-center justify-center px-6 py-12">
@@ -1953,6 +1960,297 @@ function App() {
     </div>
   );
 }
+
+  if (page === "dashboard") {
+    return (
+      <div className="min-h-screen bg-slate-950 text-white">
+
+        <nav className="flex items-center justify-between border-b border-white/10 px-8 py-5">
+
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-xl">
+              ⚡
+            </div>
+
+            <div>
+              <h1 className="font-bold">EV CHARGE AI</h1>
+              <p className="text-xs text-slate-400">
+                Management Dashboard
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setPage("home")}
+            className="text-sm text-slate-400 hover:text-white"
+          >
+            ← User App
+          </button>
+
+        </nav>
+
+        <main className="mx-auto max-w-7xl px-6 py-10">
+
+          <div className="mb-8">
+            <p className="text-sm text-emerald-400">
+              ● System Operational
+            </p>
+
+            <h2 className="mt-3 text-4xl font-bold">
+              Charging Management Dashboard
+            </h2>
+
+            <p className="mt-2 text-slate-400">
+              Monitor stations, chargers, charging sessions and
+              network demand.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-sm text-slate-400">Total Stations</p>
+              <p className="mt-2 text-3xl font-bold">12</p>
+              <p className="mt-1 text-xs text-emerald-400">
+                Network stations
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-sm text-slate-400">Total Chargers</p>
+              <p className="mt-2 text-3xl font-bold">48</p>
+              <p className="mt-1 text-xs text-emerald-400">
+                Connected chargers
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-sm text-slate-400">Active Sessions</p>
+              <p className="mt-2 text-3xl font-bold">19</p>
+              <p className="mt-1 text-xs text-cyan-400">
+                Currently charging
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-sm text-slate-400">Average Wait</p>
+              <p className="mt-2 text-3xl font-bold">8 min</p>
+              <p className="mt-1 text-xs text-yellow-400">
+                Network average
+              </p>
+            </div>
+
+          </div>
+
+          <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6">
+
+            <h3 className="text-xl font-semibold">
+              Station Monitoring
+            </h3>
+
+            <p className="mt-1 text-sm text-slate-500">
+              Current station utilization
+            </p>
+
+            <div className="mt-6 space-y-5">
+
+              <div className="rounded-2xl bg-white/5 p-5">
+                <div className="flex justify-between">
+                  <div>
+                    <p className="font-semibold">Station A</p>
+                    <p className="text-sm text-slate-500">
+                      Tech Park Charging Point
+                    </p>
+                  </div>
+
+                  <p className="text-red-400">91% Load</p>
+                </div>
+
+                <div className="mt-4 h-2 rounded-full bg-white/10">
+                  <div className="h-2 w-[91%] rounded-full bg-red-400"></div>
+                </div>
+
+                <div className="mt-3 flex justify-between text-sm text-slate-400">
+                  <span>0 / 6 available</span>
+                  <span>Wait: 35 min</span>
+                </div>
+              </div>
+
+
+              <div className="rounded-2xl bg-white/5 p-5">
+                <div className="flex justify-between">
+                  <div>
+                    <p className="font-semibold">Station B</p>
+                    <p className="text-sm text-slate-500">
+                      SRM Main Charging Hub
+                    </p>
+                  </div>
+
+                  <p className="text-emerald-400">62% Load</p>
+                </div>
+
+                <div className="mt-4 h-2 rounded-full bg-white/10">
+                  <div className="h-2 w-[62%] rounded-full bg-emerald-400"></div>
+                </div>
+
+                <div className="mt-3 flex justify-between text-sm text-slate-400">
+                  <span>2 / 6 available</span>
+                  <span>Wait: 7 min</span>
+                </div>
+              </div>
+
+
+              <div className="rounded-2xl bg-white/5 p-5">
+                <div className="flex justify-between">
+                  <div>
+                    <p className="font-semibold">Station C</p>
+                    <p className="text-sm text-slate-500">
+                      Potheri EV Hub
+                    </p>
+                  </div>
+
+                  <p className="text-cyan-400">45% Load</p>
+                </div>
+
+                <div className="mt-4 h-2 rounded-full bg-white/10">
+                  <div className="h-2 w-[45%] rounded-full bg-cyan-400"></div>
+                </div>
+
+                <div className="mt-3 flex justify-between text-sm text-slate-400">
+                  <span>4 / 8 available</span>
+                  <span>Wait: 3 min</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="mt-6 rounded-3xl border border-purple-400/20 bg-purple-400/5 p-6">
+
+            <div className="flex items-start gap-4">
+
+              <div className="text-3xl">🤖</div>
+
+              <div>
+                <h3 className="text-xl font-semibold">
+                  AI Network Recommendation
+                </h3>
+
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Station A is currently experiencing high load and
+                  a long queue. AI recommends redirecting incoming
+                  users toward Station B to reduce waiting time and
+                  balance network demand.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Analytics Section */}
+
+<div className="mt-6 grid gap-6 lg:grid-cols-2">
+
+  {/* Energy Consumption */}
+  <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+
+    <h3 className="text-xl font-semibold">
+      Energy Consumption
+    </h3>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Today's charging demand
+    </p>
+
+    <div className="mt-8 flex h-40 items-end gap-3">
+      <div className="h-[35%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+      <div className="h-[50%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+      <div className="h-[70%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+      <div className="h-[55%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+      <div className="h-[80%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+      <div className="h-[95%] flex-1 rounded-t-lg bg-emerald-400"></div>
+      <div className="h-[65%] flex-1 rounded-t-lg bg-emerald-400/60"></div>
+    </div>
+
+    <div className="mt-5 flex justify-between border-t border-white/10 pt-4">
+      <div>
+        <p className="text-xs text-slate-500">Energy Delivered</p>
+        <p className="text-xl font-bold">428 kWh</p>
+      </div>
+
+      <div className="text-right">
+        <p className="text-xs text-slate-500">Peak Demand</p>
+        <p className="text-xl font-bold text-yellow-400">6:00 PM</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  {/* AI Alerts */}
+  <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+
+    <h3 className="text-xl font-semibold">
+      🧠 AI Alerts & Recommendations
+    </h3>
+
+    <p className="mt-1 text-sm text-slate-500">
+      Intelligent network monitoring
+    </p>
+
+    <div className="mt-6 space-y-4">
+
+      <div className="rounded-2xl border border-red-400/20 bg-red-400/5 p-4">
+        <p className="font-semibold text-red-400">
+          🚨 Station A Overloaded
+        </p>
+
+        <p className="mt-1 text-sm text-slate-400">
+          Current load is 91%. New requests should be redirected
+          to nearby stations.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-4">
+        <p className="font-semibold text-yellow-400">
+          ⚠️ Demand Increasing
+        </p>
+
+        <p className="mt-1 text-sm text-slate-400">
+          AI predicts increased charging demand during evening peak hours.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-emerald-400/20 bg-emerald-400/5 p-4">
+        <p className="font-semibold text-emerald-400">
+          ✓ Load Balancing Opportunity
+        </p>
+
+        <p className="mt-1 text-sm text-slate-400">
+          Station B has spare capacity. Redirecting users here
+          can reduce network congestion.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+          
+
+
+
+
+        </main>
+
+      </div>
+    );
+  }
+
 
   return null;
 }
